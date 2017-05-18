@@ -36,6 +36,27 @@ shinyUI(fluidPage(
     mainPanel(
       
       tabsetPanel(
+        tabPanel("Instructions"
+                   , br()
+                   , tags$ul(
+                     h4(tags$li("This is the supporting pitch for the created application using Shiny. 
+                                The application is deployed on RStudio's Shiny server, and the application link
+                                is provided. Our Shiny app, named FinalProject aims to perform some exploratory
+                                analysis on the mtcars dataset.")),
+                     h4(tags$li("We first created an interactive histogram plot of the miles per galon (mpg) data
+                                We also created an interactive plot to show the relationship between the 
+                                hoursepower (hp) and the miles per galon (MPG)")),
+                     h2(tags$li("Using the slider on the left, please choose change the number of bins")),
+                     h2(tags$li("Using the checkbox on the left, please choose whether the
+                                mean and the standard deviation range is visible on the histogram")),
+                     h2(tags$li("Using the slider on the left, please change the value of miler per galon (MPG)")),
+                     h2(tags$li("Using the checkbox on the left, please choose whether the
+                                predicted linear model is shown on the plot."))
+                     
+                     
+                     
+                     
+                   )),
         tabPanel("Plot",
                  fluidRow(
                    column(8, plotOutput("histPlot")),
